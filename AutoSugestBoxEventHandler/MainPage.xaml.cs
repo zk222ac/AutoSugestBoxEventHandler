@@ -1,18 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -74,21 +62,6 @@ namespace AutoSugestBoxEventHandler
             if (args.SelectedItem is Patient p)
                 TxtInfo.Text = $"Patients Id:{p.Id} , Name:{p.Name}";
         }
-
-       // private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
-       //{
-       //     if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
-       //     {
-       //        sender.ItemsSource = sender.Text.Length > 1 ? this.GetSuggestion(sender.Text) : new string[] {"No suggestion"};
-       //     }
-       // }
-        //private string[] _suggestions = { "zoro", "zuhair" , "zanni" , "zada" , "zumba", "zaddi" , "aadi" , "ada" , "adu" , "assol"};
-        //private string[] GetSuggestion(string text)
-        //{
-        //    string[] result = null;
-        //    result = _suggestions.Where(x => x.StartsWith(text)).ToArray();
-        //    return result;
-        //}
     }
 
     public class Patient
